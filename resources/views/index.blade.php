@@ -329,8 +329,71 @@
             </div>
         </div>
     </div>
+
+<!-- Bootstrap 5 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.getElementById('formularioBootstrap').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Captura de los datos personales
+        const nombres = document.getElementById('nombres').value;
+        const apellidos = document.getElementById('apellidos').value;
+        const fecha = document.getElementById('fechaNacimiento').value;
+        const ninos = document.getElementById('ninos').value;
+
+        // Captura de las opciones seleccionadas
+        const madre = document.querySelector('input[name="madreCabeza"]:checked').value;
+        const estudio = document.querySelector('input[name="estudio"]:checked').value;
+
+        // Captura de los géneros de cine
+        const generosSeleccionados = [];
+
+        document.querySelectorAll('input[name="generos"]:checked').forEach(function(checkbox) {
+            generosSeleccionados.push(checkbox.value);
+        });
+
+        const generosTexto = generosSeleccionados.length > 0
+            ? generosSeleccionados.join(', ')
+            : 'Ninguno seleccionado';
+
+        // Organiza las respuestas
+        const respuestas = [
+            ['Nombres', nombres],
+            ['Apellidos', apellidos],
+            ['Fecha de nacimiento', fecha],
+            ['Cantidad de niños a cargo', ninos],
+            ['Madre cabeza de familia', madre],
+            ['Está realizando técnico o tecnólogo', estudio],
+            ['Géneros de cine preferidos', generosTexto]
+        ];
+
+        // Construye los resultados de forma segura
+        const contenidoResultados = document.getElementById('contenidoResultados');
+
+        contenidoResultados.replaceChildren();
+
+        respuestas.forEach(function(respuesta) {
+            const parrafo = document.createElement('p');
+            const titulo = document.createElement('strong');
+
+            titulo.textContent = respuesta[0] + ':';
+            parrafo.append(titulo, ' ' + respuesta[1]);
+
+            contenidoResultados.appendChild(parrafo);
+        });
+
+        // Muestra la tarjeta de resultados
+        const resultados = document.getElementById('resultados');
+
+        resultados.style.display = 'block';
+
+        resultados.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+</script>
 </body>
-
-
-
 </html>
+
