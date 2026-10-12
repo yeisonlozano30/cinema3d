@@ -292,6 +292,30 @@
                     name="generos" value="Romance" id="romance">
                 <label class="form-check-label" for="romance">Romance</label>
             </div>
+
+            
+                        <!-- Botón de envío -->
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">
+             Enviar y mostrar respuestas
+            </button>
+            </div>
+
+        
+                    <!-- Zona de resultados -->
+        <div id="resultados" class="mt-5" style="display: none;">
+            <div class="card border-success finance-card results-card">
+
+             <div class="card-header bg-success text-white">
+            <h5 class="mb-0">Respuestas seleccionadas</h5>
+             </div>
+
+            <div class="card-body" id="contenidoResultados">
+        </div>
+
+    </div>
+</div>
+
         </div>
     </div>
 </div>
