@@ -117,6 +117,80 @@
 
                 <!-- En el siguiente paso agregaremos el formulario -->
 
+                
+<div class="card finance-card">
+    <div class="card-body">
+
+        <form id="formularioBootstrap">
+
+            <!-- Nombres -->
+            <div class="mb-3">
+                <label for="nombres" class="form-label">
+                    Nombres
+                </label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="nombres"
+                    name="nombres"
+                    placeholder="Ingresa tus nombres"
+                    required
+                >
+            </div>
+
+            <!-- Apellidos -->
+            <div class="mb-3">
+                <label for="apellidos" class="form-label">
+                    Apellidos
+                </label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="apellidos"
+                    name="apellidos"
+                    placeholder="Ingresa tus apellidos"
+                    required
+                >
+            </div>
+
+            <!-- Fecha de nacimiento -->
+            <div class="mb-3">
+                <label for="fechaNacimiento" class="form-label">
+                    Fecha de nacimiento
+                </label>
+                <input
+                    type="date"
+                    class="form-control"
+                    id="fechaNacimiento"
+                    name="fechaNacimiento"
+                    required
+                >
+            </div>
+
+            <!-- Cantidad de niños a cargo -->
+            <div class="mb-3">
+                <label for="ninos" class="form-label">
+                    Cantidad de niños a cargo
+                </label>
+                <input
+                    type="number"
+                    class="form-control"
+                    id="ninos"
+                    name="ninos"
+                    min="0"
+                    value="0"
+                    required
+                >
+            </div>
+
+            <!-- En el paso 4 agregaremos los controles de opciones -->
+
+        </form>
+
+    </div>
+</div>
+
+
             </div>
         </div>
     </div>
